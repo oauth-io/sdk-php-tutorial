@@ -9,3 +9,4 @@ nbproject
 composer.lock
 vendor/bin
 vendor/*
+module/Application/config/config.php

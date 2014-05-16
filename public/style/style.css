@@ -1,0 +1,12 @@
+.navbar-brand img {
+    margin-top: -4px;
+    vertical-align: middle;
+}
+
+.available {
+	display: none;
+}
+
+.page {
+	margin-top : 50px;
+}

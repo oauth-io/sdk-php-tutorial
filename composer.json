@@ -11,6 +11,6 @@
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*@stable",
-        "oauth-io/oauth": "0.1.0"
+        "oauth-io/oauth": "0.1.1"
     }
 }

@@ -31,7 +31,19 @@ body {
 }
 
 div.container a.brand {
-    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    background: url(/img/icon.png) no-repeat scroll 0 10px transparent;
     margin-left: 0;
     padding: 8px 20px 12px 40px;
+}
+
+.navbar-brand {
+background: url(/img/icon.png) no-repeat scroll 5px 10px transparent;
+    margin-left: 0;
+    padding-left: 40px;
+}
+
+.highlight {
+  background: #CDF7B2;
+  padding: 5px;
+  transition: background 0.5s;
 }

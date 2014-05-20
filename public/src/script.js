@@ -3,15 +3,7 @@ function init_oauthio() {
 }
 
 function retrieve_token(callback) {
-	$.ajax({
-		url: '/oauth/token',
-		success: function(data, status) {
-			callback(null, data.token);
-		},
-		error: function(data) {
-			callback(data);
-		}
-	});
+	// Add the code to retrieve the state token here
 }
 
 function authenticate(token, callback) {

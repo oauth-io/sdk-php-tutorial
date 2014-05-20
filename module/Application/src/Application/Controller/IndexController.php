@@ -20,21 +20,7 @@ class IndexController extends AbstractActionController {
             // app key and app secret from oauth.io
             $config = require (__DIR__ . '/../../../config/config.php');
             
-            // This creates an instance of the OAuth SDK
-            $this->oauth = new OAuth();
-            
-            // Disables the SSL certificate verification if you're
-            // running a private oauthd instance, with no verified
-            // certificate.
-            // SSL verification is active by default.
-            $this->oauth->setSslVerification($config['ssl_verification']);
-            
-            // Sets the oauthd URL. This step is not compulsory if
-            // the URL is https://oauth.io.
-            $this->oauth->setOAuthdUrl($config['oauthd_url']);
-            
-            // Initializes the SDK
-            $this->oauth->initialize($config['app_key'], $config['app_secret']);
+            // Initialize the SDK here (done in step 1)
         } else {
             $this->error = true;
         }

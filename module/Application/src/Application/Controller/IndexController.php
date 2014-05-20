@@ -77,20 +77,8 @@ class IndexController extends AbstractActionController {
      * it in the session.
      */
     public function authAction() {
-        $code = $this->getRequest()->getPost('code');
-        
-        // This sends the code to OAuth.io, retrieves the access token
-        // and stores it in the session for use in other endpoints
-        $array = $this->oauth->auth($code);
-        
-        $json = new JsonModel($array);
-        
-        // Checks if the response gave an access token (for OAuth2 in that case)
-        // which works as we're using Facebook.
-        if (!isset($array['access_token'])) {
-            $this->getResponse()->setStatusCode(400);
-        }
-        return $json;
+        // Replace this code to retrieve the access token from OAuth.io
+        $this->getResponse()->setStatusCode(404);
     }
     
     /**

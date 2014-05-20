@@ -1,5 +1,5 @@
 function init_oauthio() {
-	OAuth.initialize(credentials.key);
+	// Add the code to initialize OAuth.io here
 }
 
 function retrieve_token(callback) {

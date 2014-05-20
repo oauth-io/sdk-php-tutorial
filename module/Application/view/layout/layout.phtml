@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <title>OAuth.io PHP Tutorial</title>
         <?php echo $this->headMeta()
-                                    ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-                                    ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+                                            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                                            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
         ?>
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/style.css">
@@ -30,9 +30,6 @@
         </nav>
         <div class="container">
             <?php echo $this->content; ?>
-            <footer>
-            </footer>
-            </div>
             <?php echo $this->inlineScript() ?>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

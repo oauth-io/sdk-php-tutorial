@@ -15,27 +15,7 @@ function retrieve_token(callback) {
 }
 
 function authenticate(token, callback) {
-	OAuth.popup('facebook', {
-		state: token
-	})
-		.done(function(r) {
-			$.ajax({
-				url: '/oauth/signin',
-				method: 'POST',
-				data: {
-					code: r.code
-				},
-				success: function(data, status) {
-					callback(null, data);
-				},
-				error: function(data) {
-					callback(data);
-				}
-			});
-		})
-		.fail(function(e) {
-			console.log(e);
-		});
+	// Add the code to authenticate the user here
 }
 
 function retrieve_user_info(callback) {

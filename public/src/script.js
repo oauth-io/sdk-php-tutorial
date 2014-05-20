@@ -39,15 +39,7 @@ function authenticate(token, callback) {
 }
 
 function retrieve_user_info(callback) {
-	$.ajax({
-		url: '/me',
-		success: function (data, status) {
-			callback(data);
-		},
-		error: function (data) {
-
-		}
-	});
+	// Add the code to perform a user request here
 }
 
 $('#login_button').click(function() {

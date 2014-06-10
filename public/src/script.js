@@ -15,8 +15,13 @@ function retrieve_token(callback) {
 }
 
 function authenticate(token, callback) {
-	OAuth.popup('facebook', {
-		state: token
+	OAuth.popup('google', {
+		state: token,
+		// Google requires the following field 
+		// to get a refresh token
+		authorize: {
+		    approval_prompt: 'force'
+		}
 	})
 		.done(function(r) {
 			$.ajax({

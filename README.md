@@ -103,7 +103,7 @@ For simplicity matters, the whole backend is contained in a single controller fi
 
 In that file, you'll find comments defining placeholders for the different steps of the tutorial.
 
-Here we need to initialize the SDK. To do that, you need to note the key and secret of the app you want to use on OAuth.io (in that case an app with the provider `Facebook`).
+Here we need to initialize the SDK. To do that, you need to note the key and secret of the app you want to use on OAuth.io (in that case an app with the provider `Google`).
 
 Once you have them, take a look at the `module/Application/config/config.example.php`. This file holds a configuration that we will use in the controller file, and will enable us to store the key and secret efficiently.
 
@@ -256,7 +256,9 @@ Just replace this with the following code :
 
     // This sends the code to OAuth.io, retrieves the access token
     // and stores it in the session for use in other endpoints
-    $array = $this->oauth->auth($code);
+    $array = $this->oauth->auth('facebook', array(
+        'code': $code
+    ));
 
     $json = new JsonModel($array);
 
@@ -302,7 +304,8 @@ Just replace it with the following code :
 public function requestAction() {
         // This creates a request object that contains the methods
         // get|post|put|patch|del|me to perform API requests
-        $request_object = $this->oauth->create('facebook');
+        // thanks to the credentials stored in the session
+        $request_object = $this->oauth->auth('google');
 
         // This performs a request on the unified user info endpoint
         // to get his name, email and avatar, regardless of the provider's

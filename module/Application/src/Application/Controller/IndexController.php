@@ -99,7 +99,9 @@ class IndexController extends AbstractActionController {
      * has been authenticated through the auth action.
      */
     public function requestAction() {
-
+        // This creates a request object that contains the methods
+        // get|post|put|patch|del|me to perform API requests
+        // thanks to the credentials stored in the session
         $request_object = $this->oauth->auth('google');
         
         // This performs a request on the unified user info endpoint

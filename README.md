@@ -256,7 +256,7 @@ Just replace this with the following code :
 
     // This sends the code to OAuth.io, retrieves the access token
     // and stores it in the session for use in other endpoints
-    $array = $this->oauth->auth('facebook', array(
+    $array = $this->oauth->auth('google', array(
         'code': $code
     ));
 
